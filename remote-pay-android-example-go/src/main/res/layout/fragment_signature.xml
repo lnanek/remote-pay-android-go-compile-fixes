@@ -12,10 +12,17 @@
         android:layout_marginBottom="11dp"
         android:layout_marginRight="11dp"
         android:background="@drawable/btn_rounded_green"
-        android:onClick="acceptSignature"
         android:padding="22dp"
         android:text="Accept"
         android:textColor="@color/white_FFFFFF" />
+    <!--
+        Removed attribute due to compile error:
+        "
+        fragment_signature.xml:15: Error: Corresponding method handler 'public void acceptSignature(android.view.View)' not found [OnClick]
+          android:onClick="acceptSignature"
+        "
+        android:onClick="acceptSignature"
+    -->
 
     <android.gesture.GestureOverlayView
         android:id="@+id/SignatureView"

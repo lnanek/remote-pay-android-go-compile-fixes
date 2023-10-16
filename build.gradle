@@ -1,7 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
+        // XXX: jcenter is no longer running and giving errors on dependency download attempts.
+        //jcenter()
+        //maven { url "http://jcenter.bintray.com"}
+        maven { url "https://repo1.maven.org/maven2/" }
         google()
     }
 
@@ -11,7 +14,11 @@ buildscript {
 }
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
+        // XXX: jcenter is no longer running and giving errors on dependency download attempts.
+        //jcenter()
+        //maven { url "http://jcenter.bintray.com"}
+        maven { url "https://repo1.maven.org/maven2/" }
         google()
     }
 }
